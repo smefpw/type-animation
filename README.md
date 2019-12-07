@@ -1,2 +1,2 @@
-# type-animation
-C++ typing animation
+# Type animation for console
+Created for C++

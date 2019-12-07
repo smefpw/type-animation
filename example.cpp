@@ -14,6 +14,9 @@ int main()
   
 	// This will use a custom delay, but will still use default endl setting.
 	kb::type_to_console("Big hackerman...", 125);
+	
+	// This will use a custom should endl, but will still use default delay setting.
+	kb::type_to_console("Big hackerman...", true);
   
 	// This will use a custom delay and custom should endl;
 	kb::type_to_console("Big hackerman...", 125, true);

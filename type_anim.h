@@ -27,6 +27,20 @@ namespace kb
 		}
 	}
 	
+	inline void type_to_console(const std::string_view str, const bool endl)
+	{
+		for (const auto c : str)
+		{
+			std::cout << c;
+			std::this_thread::sleep_for(std::chrono::milliseconds(kb_settings::default_dur));
+		}
+
+		if (endl)
+		{
+			std::cout << std::endl;
+		}
+	}
+	
 	inline void type_to_console(const std::string_view str, const unsigned dur)
 	{
 		for (const auto c : str)

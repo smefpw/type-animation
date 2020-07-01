@@ -13,7 +13,7 @@ namespace kb
 		inline bool default_endl = false;
 	}
 
-	inline void type_to_console(const std::string_view str, const unsigned dur, const bool endl)
+	inline void type_to_console(const std::string_view str, const unsigned dur = kb_settings::default_dur, const bool endl = kb_settings::default_endl)
 	{
 		for (const auto c : str)
 		{
@@ -27,7 +27,7 @@ namespace kb
 		}
 	}
 	
-	inline void type_to_console(const std::string_view str, const bool endl)
+	inline void type_to_console(const std::string_view str, const bool endl = kb_settings::default_endl)
 	{
 		for (const auto c : str)
 		{
@@ -36,34 +36,6 @@ namespace kb
 		}
 
 		if (endl)
-		{
-			std::cout << std::endl;
-		}
-	}
-	
-	inline void type_to_console(const std::string_view str, const unsigned dur)
-	{
-		for (const auto c : str)
-		{
-			std::cout << c;
-			std::this_thread::sleep_for(std::chrono::milliseconds(dur));
-		}
-
-		if (kb_settings::default_endl)
-		{
-			std::cout << std::endl;
-		}
-	}
-
-	inline void type_to_console(const std::string_view str)
-	{
-		for (const auto c : str)
-		{
-			std::cout << c;
-			std::this_thread::sleep_for(std::chrono::milliseconds(kb_settings::default_dur));
-		}
-
-		if (kb_settings::default_endl)
 		{
 			std::cout << std::endl;
 		}
